@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Metaheuristics Playground</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Metaheuristics Playground</h1>
+
+    <section class="form-section">
+        <div class="form-columns">
+            <div class="form-column">
+                <h2>Ustawienia problemu</h2>
+
+                <label class="highlight-label">Wybierz algorytm:</label>
+                <select id="algorithm" class="highlight-select">
+                    <option value="abc">Artificial Bee Colony (ABC)</option>
+                    <option value="bat">Bat Algorithm</option>
+                    <option value="ga">Genetic Algorithm (GA)</option>
+                </select>
+
+                <label>Funkcja celu:</label>
+                <select id="objective">
+                    <option value="sphere">Sphere</option>
+                    <option value="rastrigin">Rastrigin</option>
+                    <option value="rosenbrock">Rosenbrock</option>
+                    <option value="ackley">Ackley</option>
+                    <option value="griewank">Griewank</option>
+                    <option value="schwefel">Schwefel</option>
+                    <option value="zakharov">Zakharov</option>
+                </select>
+
+                <p id="boundsInfo" style="font-weight:bold; color:#007acc; margin-top:10px;"></p>
+
+                <label>Liczba iteracji:</label>
+                <input id="iterations" type="number" value="100" min="1">
+
+                <label>Wymiar przestrzeni (D):</label>
+                <input id="dimensions" type="number" value="2" min="1">
+
+                <label>Liczba agentów:</label>
+                <input id="agents" type="number" value="30" min="1">
+            </div>
+
+            <div class="form-column" id="customParams">
+                <!-- Tu JS wstawia parametry algorytmu -->
+            </div>
+        </div>
+
+        <div class="start-button-container">
+            <button id="startBtn">Start</button>
+            <div id="status"></div>
+        </div>
+    </section>
+
+
+    <section class="error-section" id="errorSection" style="display:none;">
+        <div class="error-box">
+            <h3>Błąd</h3>
+            <div id="errorMessage"></div>
+        </div>
+    </section>
+
+
+
+    <section class="stats-section" id="statsSection" style="display:none;">
+        <h2>Statystyki populacji</h2>
+            <table class="stats-table">
+                <tbody id="statsTableBody">
+            <!-- JS wstawi tutaj wiersze -->
+                </tbody>
+            </table>
+    </section>
+
+
+    <section class="results-section" id="resultsSection">
+        <h2>Wyniki</h2>
+        <div id="results"></div>
+
+        <div class="charts-row">
+            <div class="chart-box">
+                <h3>Convergence curve</h3>
+                <div class="chart-inner">
+                    <canvas id="convergenceChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-box">
+                <h3>Animacja 2D</h3>
+                <div class="chart-inner">
+                    <canvas id="animationCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <h2>O projekcie i algorytmach</h2>
+        <p>
+            Metaheurystyki to klasa algorytmów optymalizacyjnych inspirowanych naturą, 
+            które potrafią znajdować dobre rozwiązania nawet dla bardzo trudnych, 
+            nieliniowych i wielomodalnych funkcji celu. W przeciwieństwie do metod 
+            gradientowych nie wymagają znajomości pochodnych i dobrze radzą sobie 
+            w krajobrazach pełnych minimów lokalnych.
+        </p>
+
+        <h3>Przykładowe algorytmy:</h3>
+
+        <ul>
+            <li><strong>Artificial Bee Colony (ABC)</strong> — inspirowany zachowaniem pszczół podczas poszukiwania pożywienia. Łączy eksplorację i eksploatację dzięki trzem typom pszczół: employed, onlooker i scout.</li>
+
+            <li><strong>Bat Algorithm</strong> — oparty na echolokacji nietoperzy. Wykorzystuje częstotliwość, głośność i pulsowanie do sterowania ruchem agentów.</li>
+
+            <li><strong>Genetic Algorithm (GA)</strong> — klasyczna metoda inspirowana ewolucją biologiczną. Wykorzystuje selekcję, krzyżowanie i mutację do stopniowego ulepszania populacji rozwiązań.</li>
+        </ul>
+
+        <p>
+            Celem wizualizacji jest pokazanie, jak populacja agentów porusza się po 
+            krajobrazie funkcji celu, jak zbiega do minimum oraz jak zmienia się 
+            jakość rozwiązań w czasie. Statystyki i wykresy pomagają zrozumieć dynamikę 
+            działania poszczególnych algorytmów.
+        </p>
+    </section>
+
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

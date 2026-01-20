@@ -1,0 +1,339 @@
+/* ============================================
+   GLOBAL
+============================================ */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007acc;
+}
+
+/* ============================================
+   FORM SECTION
+============================================ */
+.form-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.form-columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.form-column {
+    flex: 1;
+    min-width: 280px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.form-column h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.highlight-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007acc;
+    margin-top: 20px;
+}
+
+.highlight-select {
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    background-color: #e6f2ff;
+    margin-top: 5px;
+}
+
+/* Wyróżniony wybór algorytmu */
+#algorithm {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 12px;
+    border: 3px solid #007acc;
+    background-color: #e6f2ff;
+    color: #003d66;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0,122,204,0.3);
+    transition: 0.2s ease;
+}
+
+#algorithm:hover {
+    background-color: #d9ecff;
+    border-color: #005f99;
+    box-shadow: 0 0 12px rgba(0,122,204,0.5);
+}
+
+
+/* ============================================
+   START BUTTON
+============================================ */
+.start-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ============================================
+   ERROR
+============================================ */
+
+.error-section {
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #cc0000;
+    border-radius: 8px;
+    background: #fff5f5;
+    max-width: 900px;
+}
+
+.error-box h3 {
+    margin-top: 0;
+    color: #cc0000;
+}
+
+/* ============================================
+   STATS SECTION
+============================================ */
+
+.stats-section {
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    background: #f7fbff;
+    max-width: 900px;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.stats-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #d0dce7;
+}
+
+.stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+.stats-table td:first-child {
+    font-weight: bold;
+    width: 50%;
+}
+
+/* ============================================
+   RESULTS SECTION
+============================================ */
+.results-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.results-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007acc;
+}
+
+.centered {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#results {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   CHARTS LAYOUT
+============================================ */
+.charts-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.chart-box {
+    flex: 1 1 0;
+    min-width: 320px;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-box h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* ============================================
+   INFO SECTION
+============================================ */
+
+.info-section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: #f4f9ff;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.info-section h2 {
+    margin-top: 0;
+    color: #005a99;
+}
+
+.info-section h3 {
+    margin-top: 20px;
+    color: #007acc;
+}
+
+.info-section ul {
+    margin-left: 20px;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+}
+
+/* ============================================
+   FIXED-SHAPE CANVAS CONTAINERS
+============================================ */
+
+/* 
+   UWAGA: To jest klucz do naprawy convergence curve.
+   Zamiast kwadratu (100%), dajemy proporcję 4:3 (75%).
+   Dzięki temu wykres NIE jest wysoki jak komin.
+*/
+.chart-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 ratio */
+}
+
+/* Canvas wypełnia kontener */
+.chart-inner canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+/* ============================================
+   RESULT BOX   
+============================================ */
+
+.best-result-wrapper {
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.best-result-box {
+    background-color: #eef6ff;
+    border: 2px solid #007acc;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.best-result-box h3 {
+    margin-top: 0;
+    color: #005a99;
+    font-size: 18px;
+}
+
+.best-result-box .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.best-result-box .value {
+    font-family: monospace;
+    color: #007acc;
+}
